@@ -15,9 +15,15 @@ class CreateTopPosTable extends Migration
     {
         Schema::create('top_pos', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->date('date')->index('dates');
+            $table->integer('category');
+            $table->integer('parentCategory')->nullable();
+            $table->integer('position');
         });
     }
+
+
+
 
     /**
      * Reverse the migrations.
