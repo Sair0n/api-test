@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
     return $request->user();
 });*/
 
-Route::get('appTopCategory', [\App\Http\Controllers\Api\TopPosController::class,'index']);
+Route::get('appTopCategory', [\App\Http\Controllers\Api\TopPosController::class,'index'])->middleware('api.log');
